@@ -1,0 +1,880 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: .5s;
+}
+
+body {
+    background-color: #040425;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* шрифты начало */
+
+@font-face {
+    font-family: "ab";
+    src: url(../fonts/AnonymousPro-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "ar";
+    src: url(../fonts/AnonymousPro-Regular.ttf);
+    font-weight: 400;
+}
+
+/* шрифты конец */
+
+/* фотка начало */
+
+.img {
+    height: 100vh;
+    background-size: 100%;
+    background-image: url(../image/banner/banner.png);
+}
+
+/* фотка конец */
+
+/* главная страница */
+
+/* шапка+баннер начало */
+
+.header_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-family: "ar";
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.header_block nav a {
+    font-family: "ar";
+    color: white;
+    font-size: 20px;
+}
+
+.header_block nav a:hover {
+    color: #D2AC47;
+}
+
+.header_block nav {
+    display: flex;
+    gap: 60px;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.auto a {
+    font-family: "ar";
+    font-size: 20px;
+    color: #fff;
+}
+
+.auto a:hover {
+    color: #000;
+}
+
+.auto {
+    padding: 15px 30px;
+    color: white;
+    background: none;
+    border: 1px  solid white;
+    border-radius: 10px;
+    font-family: "ar";
+    font-size: 20px;
+}
+
+.auto:hover {
+    padding: 15px 30px;
+    color: #000;
+    background: #D2AC47;
+    border: 1px  solid #D2AC47;
+    border-radius: 10px;
+}
+
+.reg a {
+    font-family: "ar";
+    font-size: 20px;
+    color: #000;
+}
+
+.reg {
+    padding: 15px 30px;
+    color: #000;
+    background: #D2AC47;
+    border: 1px  solid #D2AC47;
+    border-radius: 10px;
+    font-family: "ar";
+    font-size: 20px;
+}
+
+.reg a:hover {
+    color: #fff;
+}
+
+.reg:hover {
+    padding: 15px 30px;
+    color: white;
+    background: none;
+    border: 1px  solid white;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: "ab";
+    color: white;
+    font-size: 90px;
+    margin-top: 150px;
+}
+
+.banner_block span {
+    font-family: "ab";
+    color: #D2AC47;
+    font-size: 90px;
+}
+
+.preim_block {
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.preim {
+    width: 400px;
+    height: 140px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    background-color: rgba(217, 217, 217, 0.3);
+    padding: 20px 20px 20px 35px;
+    display: flex;
+    gap: 20px;
+}
+
+.img_block {
+    width: 100px;
+    height: 100px;
+    border-radius: 110px;
+    background-color: rgba(217, 217, 217, 0.4);
+}
+
+.one {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+.three{
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.text_block {
+    display: flex;
+    align-items: center;
+}
+
+.text_block p {
+    font-family: "ar";
+    color: #fff;
+    font-size: 16px;
+}
+
+/* шапка+баннер конец */
+
+/* каталог начало */
+
+.catalog {
+    background: #040425;
+}
+
+h2 {
+    font-family: "ab";
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 140px;
+    margin-bottom: 100px;
+}
+
+.categories {
+    width: 500px;
+    height: 50px;
+    background: #fff;
+    border-radius: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.yellow {
+    width: 150px;
+    height: 40px;
+    border-radius: 35px;
+    padding: 8px;
+    text-align: center;
+}
+
+.yellow:hover {
+    background: #D2AC47;
+}
+
+.yellow p {
+    font-family: "ab";
+    color: #000;
+    font-size: 12px;
+}
+
+.filtr {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 70px;
+}
+
+.filtr p {
+    font-family: "ab";
+    color: #fff;
+    font-size: 16px;
+}
+
+table {
+    font-family: "ab";
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+td {
+    border: 1px solid #fff;
+    padding: 10px 15px;
+}
+
+.left {
+    border-radius: 15px 0 0 15px;
+}
+
+.right {
+    border-radius: 0 15px 15px 0;
+}
+
+.rayon {
+    border-radius: 15px;
+    border: 1px solid #fff;
+    padding: 15px 80px 15px 15px;
+    margin-top: 10px;
+}
+
+.otdo {
+    padding: 10px 60px 10px 10px;
+}
+
+.pred {
+    padding: 10px 20px;
+    margin-top: 25px;
+    border: 1px solid #D2AC47;
+    font-family: "ab";
+    color: #000;
+    font-size: 16px;
+    background: #D2AC47;
+    border-radius: 15px;
+}
+
+.pred:hover {
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.card {
+    width: 400px;
+    height: 640px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+}
+
+.card:hover {
+    border: 1px solid rgba(210, 172, 71, 0.4);
+}
+
+
+.card img {
+    width: 400px;
+    height: 350px; 
+}
+
+.place {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 20px;
+    font-family: "ab";
+    color: #fff;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.card h4 {
+    font-family: "ab";
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.card hr {
+    width: 360px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+}
+
+.place img {
+    width: 16px;
+    height: 24px;
+}
+
+.strelka img {
+    width: 16px;
+    height: 12px;
+    margin-top: 35px;
+}
+
+.card h3 {
+    font-family: "ab";
+    color: #D2AC47;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.card span {
+    font-family: "ab";
+    color: #fff;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.strelka a {
+    font-family: "ab";
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.strelka a:hover {
+    color: #D2AC47;
+}
+
+.strelka {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.podr a {
+    font-family: "ab";
+    font-size: 16px;
+    color: #000;
+}
+
+.podr a:hover {
+ color: #fff;
+}
+
+.podr {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 55px;
+    border-radius: 15px;
+    border: 1px solid #D2AC47;
+    color: #000;
+    background: #D2AC47;
+    margin-bottom: 70px;
+}
+
+.podr:hover {
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* каталог конец */
+
+/* футер начало */
+
+footer {
+    padding: 30px 0;
+}
+
+.footer_block  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.logo_footer img {
+    width: 40px;
+    height: 100px;
+}
+
+.logo_footer p {
+    font-family: "ar";
+    font-size: 28px;
+    color: #fff;
+}
+
+.fut {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.footer_block nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer_block nav a {
+    font-family: "ar";
+    color: white;
+    font-size: 16px;
+}
+
+.footer_block nav a:hover {
+    color: #D2AC47;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contacts p {
+    font-family: "ar";
+    color: white;
+    font-size: 16px;
+}
+
+.contacts a {
+    font-family: "ar";
+    color: white;
+    font-size: 16px;
+}
+
+/* футер конец */
+
+/* страница каталога */
+
+.inp {
+    margin-top: 70px;
+    position: relative;
+}
+
+.inp img {
+    position: absolute;
+    top: 3px;
+    right: 995px;
+}
+
+.inp input {
+    padding: 10px 15px;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-family: "ar";
+    color: white;
+    font-size: 16px;
+}
+
+/* страница карточки */
+
+.gl {
+    font-family: "ar";
+    color: white;
+    font-size: 22px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    margin-left: 40px;
+}
+
+.blocks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info {
+    width: 550px;
+}
+
+.menejer {
+    background: rgba(217, 217, 217, 0.4);
+    border-radius: 20px;
+}
+
+.photo {
+    width: 550px;
+    height: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.photo img {
+    width: 100px;
+    height: 100px;
+}
+
+.name h3 {
+    font-family: "ar";
+    color: white;
+    font-size: 22px;
+}
+
+.name p {
+    font-family: "ar";
+    color: #D2AC47;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.call {
+    padding: 10px 35px;
+    border-radius: 10px;
+    border: 1px solid rgba(217, 217, 217, 0.6);
+    color: #000;
+    background: rgba(217, 217, 217, 0.6);
+    font-family: "ar";
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.call:hover {
+    background: none;
+    border: 1px solid rgba(217, 217, 217, 0.6);
+}
+
+.kratkaya {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 337px;
+    padding: 40px;
+}
+
+.many_text h4 {
+    font-family: "ar";
+    font-size: 14px;
+    color: #D2AC47;
+    margin-bottom: 20px;
+}
+
+.many_text p {
+    font-family: "ar";
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.costs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    color: #fff;
+    margin-top: 40px;
+}
+.cost p{
+    font-family: "ar";
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cost span {
+    font-family: "ab";
+    font-size: 26px;
+    color: #D2AC47;
+}
+
+.metrs p {
+    font-family: "ar";
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.metrs span {
+    font-family: "ab";
+    font-size: 26px;
+    color: #D2AC47;
+}
+
+/* страница авторизации */
+
+.img_two {
+    background-size: 100%;
+    background-image: url(../image/page_autoreg/fon_autoreg.png);
+}
+
+.auto_block {
+    margin-top: 100px;
+}
+
+.autoreg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #fff;
+}
+
+.autoriz a {
+    font-family: "ar";
+    font-size: 26px;
+    color: #fff;
+}
+
+.palka {
+    width: 155px;
+    height: 3px;
+    background: #D2AC47;
+}
+
+.avtor {
+    font-family: "ar";
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.regis {
+    font-family: "ar";
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.str {
+    font-family: "ar";
+    font-size: 22px;
+    color: #fff;
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.inps {
+    text-align: left;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.inps p {
+    font-family: "ar";
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.inptwo {
+    padding: 10px 30px;
+    width: 600px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 50px;
+}
+
+.inps input {
+    padding: 10px 30px;
+    width: 600px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+}
+
+.voyti a {
+    font-family: "ar";
+    font-size: 20px;
+    color: #000;
+}
+
+.voyti a:hover {
+    color: #fff;
+}
+
+.voyti {
+    padding: 10px 40px;
+    background: #D2AC47;
+    border: 1px solid #D2AC47;
+    color: #000;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+.voyti:hover {
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+}
+
+/* страница личного кабинета */
+
+.lk_block h3{
+    font-family: "ar";
+    font-size: 36px;
+    color: #D2AC47;
+    text-align: center;
+}
+
+.lk_block {
+    color: #fff;
+}
+
+.lich {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.chel_inf {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.chel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "ar";
+    font-size: 14px;
+}
+
+.prof {
+    width: 200px;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.palochka {
+    height: 350px;
+    width: 1px;
+    background: #fff;
+}
+
+.inf {
+    margin-top: 70px;
+    font-family: "ar";
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.inf h4 {
+    margin-bottom: 20px;
+}
+
+.vtor {
+    display: flex;
+    gap: 70px;
+    margin-left: 100px;
+}
+
+.chel_photo img {
+    margin-bottom: 40px;
+}
+
+.chel_photo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.chel_photo button {
+   display: block;
+    margin: 0 auto;
+}
+
+.vtor_inf {
+    margin-top: 60px;
+}
+
+.vtor_inf p {
+    font-family: "ar";
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.pal {
+    width: 300px;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.vtor_inf button {
+    display: block;
+    margin: 0 auto;
+}
+
+.pal_two {
+    width: 300px;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 115px;
+}
+
+.knops {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
