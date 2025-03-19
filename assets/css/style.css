@@ -58,6 +58,15 @@ body {
     color: white;
     font-size: 16px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .header_block nav a {
@@ -178,12 +187,18 @@ h1 {
     display: block;
     margin: 0 auto;
     padding-top: 25px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .three{
     display: block;
     margin: 0 auto;
     padding-top: 30px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .text_block {
@@ -307,10 +322,11 @@ td {
 
 .cards {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin-top: 70px;
-    gap: 10px;
+    gap: 20px;
     margin-bottom: 50px;
 }
 
@@ -319,16 +335,20 @@ td {
     height: 640px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 20px;
+    flex-shrink: 0;
 }
-
-.card:hover {
-    border: 1px solid rgba(210, 172, 71, 0.4);
-}
-
 
 .card img {
     width: 400px;
-    height: 350px; 
+    height: 350px;
+    border-radius: 20px 20px 0 0;
+}
+
+.card hr {
+    width: 360px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
 }
 
 .place {
@@ -351,22 +371,17 @@ td {
     margin-bottom: 25px;
 }
 
-.card hr {
-    width: 360px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.4);
-    margin: 0 auto;
-}
-
 .place img {
-    width: 16px;
-    height: 24px;
+    width: 12px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 .strelka img {
-    width: 16px;
-    height: 12px;
+    width: 12px;
+    height: 8px;
     margin-top: 35px;
+    flex-shrink: 0;
 }
 
 .card h3 {
@@ -876,5 +891,255 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+#burger {
+    display: none;
+}
+
+.burger label {
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+#burger:checked ~ .burger span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+#burger:checked ~ .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+#burger:checked ~ .burger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile_menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(4, 4, 37, 0.98);
+    padding: 80px 20px;
+    transition: 0.3s;
+}
+
+#burger:checked ~ .mobile_menu {
+    left: 0;
+}
+
+.mobile_menu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile_menu nav a {
+    font-family: "ar";
+    color: white;
+    font-size: 24px;
+    position: relative;
+}
+
+.mobile_menu nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #D2AC47;
+    transition: 0.3s;
+}
+
+.mobile_menu nav a:hover::after {
+    width: 100%;
+}
+
+.mobile_menu .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+@media(max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .banner_block span {
+        font-size: 70px;
+    }
+
+    .preim_block {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .categories {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 768px) {
+    .header_block nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        z-index: 1000;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+
+    .banner_block span {
+        font-size: 48px;
+    }
+
+    .preim {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .filtr {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .rayon {
+        width: 100%;
+    }
+
+    .footer_block {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .fut {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .img_block {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+
+    .one, .three {
+        width: 40px;
+        height: 40px;
+        padding-top: 15px;
+    }
+
+    .text_block {
+        flex: 1;
+    }
+
+    .text_block p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 320px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .banner_block span {
+        font-size: 32px;
+    }
+
+    .preim {
+        padding: 10px;
+    }
+
+    .img_block {
+        width: 60px;
+        height: 60px;
+    }
+
+    .one, .three {
+        width: 30px;
+        height: 30px;
+        padding-top: 10px;
+    }
+
+    .text_block p {
+        font-size: 14px;
+    }
+
+    .yellow {
+        width: 100px;
+    }
+
+    .yellow p {
+        font-size: 10px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card h4 {
+        font-size: 16px;
+    }
+
+    .card span {
+        font-size: 14px;
+    }
+
+    .strelka a {
+        font-size: 16px;
+    }
 }
 
